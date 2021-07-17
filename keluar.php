@@ -19,6 +19,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -83,7 +84,7 @@
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
-                                            <th>Tanggal</th>                                          
+                                            <th>Tanggal</th>
                                             <th>Nama Barang</th>
                                             <th>Deskripsi</th>
                                             <th>Srock</th>
@@ -100,7 +101,8 @@
                                             ?>
 
                                         <tr>
-                                            <td><?=date('D-d-M-Y h-i-s-a',strtotime($tanggal));?></td>                                             
+                                            
+                                            <td><?=date('D-d-M-Y h-i-s-a',strtotime($tanggal));?></td>
                                             <td><?=$namabarang;?></td>
                                             <td><?=$qty;?></td>
                                             <td><?=$penerima;?></td>
