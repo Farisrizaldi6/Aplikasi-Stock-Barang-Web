@@ -14,11 +14,13 @@
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+        <!-- pemanggilan script unutk modals -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -37,7 +39,7 @@
                     <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
                 </div>
             </form>
-            <!-- Navbar-->
+            <!-- Navbar profil login-->
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
@@ -63,6 +65,7 @@
                 </nav>
             </div>
             <div id="layoutSidenav_content">
+                <!-- main program body -->
                 <main>
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Barang Masuk</h1>
@@ -79,6 +82,7 @@
                             Tambah Barang Masuk
                         </button>
                         
+                        <!-- kolom nama nama menu di tabel -->
                             <div class="card-body">
                                 <table id="datatablesSimple">
                                     <thead>
@@ -101,7 +105,7 @@
                                             ?>
 
                                         <tr>
-                                            <td><?=date('D-d-M-Y h-i-s-a',strtotime($tanggal));?></td>
+                                        <td><?=date('D-d-M-Y h-i-s-a',strtotime($tanggal));?></td>
                                             <td><?=$namabarang;?></td>
                                             <td><?=$qty;?></td>
                                             <td><?=$keterangan;?></td>
@@ -115,6 +119,8 @@
                         </div>
                     </div>
                 </main>
+
+                <!-- footer  -->
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
@@ -134,6 +140,8 @@
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
         <script src="js/datatables-simple-demo.js"></script>
     </body>
+
+
        <!-- The Modal -->
   <div class="modal fade" id="myModal" >
     <div class="modal-dialog">
@@ -141,14 +149,16 @@
       
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">Tambah Barang</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <!-- buton tambah barang  -->
+        <h4 class="modal-title">Tambah Barang masuk </h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         
         <!-- Modal body -->
         <form method="POST">
         <div class="modal-body">
-            <select name="barangnya" class="from-control">
+                            
+            <select name="barangnya" class="from-control" required> 
             <?php
             $ambilsemuadatanya = mysqli_query($conn," select * from stock");
             while( $fetcharray = mysqli_fetch_array($ambilsemuadatanya)){
@@ -170,12 +180,12 @@
         </div>
         
         </form>
+
         <!-- Modal footer -->
         <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
         </div>
-        
-      </div>
+        </div>
     </div>
   </div>
 </html>
