@@ -83,7 +83,7 @@
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
-                                            <th>Tanggal</th>
+                                            <td><?=date('D-d-M-Y h-i-s-a',strtotime($tanggal));?></td>                                            
                                             <th>Nama Barang</th>
                                             <th>Deskripsi</th>
                                             <th>Srock</th>
