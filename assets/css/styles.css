@@ -56,7 +56,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  background-color: #fff;
+  background-color: #b0c4de; /* ini juga di ubah */
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -166,7 +166,7 @@ ul ol {
 dt {
   font-weight: 700;
 }
-}
+
 dd {
   margin-bottom: 0.5rem;
   margin-left: 0;
@@ -185,7 +185,6 @@ small, .small {
   font-size: 0.875em;
 }
 
-}
 mark, .mark {
   padding: 0.2em;
   background-color: #fcf8e3;
@@ -3025,7 +3024,7 @@ textarea.form-control-lg {
   box-shadow: 0 0 0 0.25rem rgba(130, 138, 145, 0.5);
 }
 .btn-check:checked + .btn-secondary, .btn-check:active + .btn-secondary, .btn-secondary:active, .btn-secondary.active, .show > .btn-secondary.dropdown-toggle {
-  color: #fff;
+  color: #212529;
   background-color: #565e64;
   border-color: #51585e;
 }
@@ -3129,8 +3128,8 @@ textarea.form-control-lg {
 }
 
 .btn-danger {
-  color: #fff;
-  background-color: #dc3545;
+  color: #grey;
+  background-color: dark;
   border-color: #dc3545;
 }
 .btn-danger:hover {
@@ -4255,6 +4254,7 @@ textarea.form-control-lg {
 }
 .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
   color: #fff;
+  background-color: #414645; /* yang ini juga di ubah */
 }
 .navbar-dark .navbar-nav .nav-link {
   color: rgba(255, 255, 255, 0.55);
@@ -4291,7 +4291,7 @@ textarea.form-control-lg {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: #d1cfc8; 
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
@@ -4317,7 +4317,6 @@ textarea.form-control-lg {
 .card > .card-header + .list-group,
 .card > .list-group + .card-footer {
   border-top: 0;
-
 }
 
 .card-body {
@@ -5252,7 +5251,7 @@ textarea.form-control-lg {
 }
 
 .toast-body {
-  padding: 0.75rem;
+  padding: 0.75rem
   word-wrap: break-word;
 }
 
@@ -5363,6 +5362,7 @@ textarea.form-control-lg {
   padding: 1rem;
 }
 
+/* footer */
 .modal-footer {
   display: flex;
   flex-wrap: wrap;
@@ -5370,7 +5370,7 @@ textarea.form-control-lg {
   align-items: center;
   justify-content: flex-end;
   padding: 0.75rem;
-  border-top: 1px solid #dee2e6;
+  border-top: 1px solid #212529;
   border-bottom-right-radius: calc(0.3rem - 1px);
   border-bottom-left-radius: calc(0.3rem - 1px);
 }
@@ -7404,7 +7404,7 @@ textarea.form-control-lg {
 }
 
 .text-body {
-  color: #212529 !important;
+  color: #212529!important;
 }
 
 .text-muted {
@@ -7424,7 +7424,7 @@ textarea.form-control-lg {
 }
 
 .bg-primary {
-  background-color: #0d6efd !important;
+  background-color: #b0c4de !important; /* ini tadi ku ubah */
 }
 
 .bg-secondary {
@@ -7448,19 +7448,19 @@ textarea.form-control-lg {
 }
 
 .bg-light {
-  background-color: #f8f9fa !important;
+  background-color: #212529 !important; 
 }
 
 .bg-dark {
-  background-color: #212529 !important;
+  background-color: #212529!important; 
 }
 
 .bg-body {
-  background-color: #fff !important;
+  background-color: #b0c4de !important;
 }
 
 .bg-white {
-  background-color: #fff !important;
+  background-color: #b0c4de !important;
 }
 
 .bg-transparent {
@@ -10879,13 +10879,11 @@ body {
   min-height: 100vh;
 }
 #layoutAuthentication #layoutAuthentication_content {
-
   min-width: 0;
   flex-grow: 1;
 }
 #layoutAuthentication #layoutAuthentication_footer {
   min-width: 0;
-
 }
 
 #layoutSidenav {
