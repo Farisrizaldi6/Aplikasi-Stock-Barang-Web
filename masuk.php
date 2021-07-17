@@ -101,7 +101,7 @@
                                             ?>
 
                                         <tr>
-                                            <td><?=$tanggal;?></td>
+                                            <td><?=date('D-d-M-Y h-i-s-a',strtotime($tanggal));?></td>
                                             <td><?=$namabarang;?></td>
                                             <td><?=$qty;?></td>
                                             <td><?=$keterangan;?></td>
